@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculadora"
+    android:background="#303030"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculadora"
+        android:fontFamily="@font/electrolize"
+        android:textColor="#EBEBEB"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/operacion"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sharetechmono"
+        android:textSize="20sp"
+        android:textColor="#d1d1d1"
+        android:textColorHint="#cccccc"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/dato"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sharetechmono"
+        android:textSize="28sp"
+        android:textColor="#ffffff"
+        android:textColorHint="#cccccc"
+        android:layout_marginBottom="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        >
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            tools:targetApi="ice_cream_sandwich">
+
+            <Button
+                android:id="@+id/nueve"
+                android:background="#8E24AA"
+                android:onClick="numeros"
+                android:text="@string/nueve"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/ocho"
+                android:background="#5E35B1"
+                android:onClick="numeros"
+                android:text="@string/ocho"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/siete"
+                android:background="#3949AB"
+                android:onClick="numeros"
+                android:text="@string/siete"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/suma"
+                android:background="#EBEBEB"
+                android:onClick="signosComunes"
+                android:text="@string/mas"
+                android:textColor="#000000"
+                />
+
+            <Button
+                android:id="@+id/seis"
+                android:background="#7B1FA2"
+                android:onClick="numeros"
+                android:text="@string/seis"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/cinco"
+                android:background="#512DA8"
+                android:onClick="numeros"
+                android:text="@string/cinco"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/cuatro"
+                android:background="#303F9F"
+                android:onClick="numeros"
+                android:text="@string/cuatro"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/resta"
+                android:background="#EBEBEB"
+                android:onClick="signosComunes"
+                android:text="@string/menos"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/tres"
+                android:background="#6A1B9A"
+                android:onClick="numeros"
+                android:text="@string/tres"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/dos"
+                android:background="#4527A0"
+                android:onClick="numeros"
+                android:text="@string/dos"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/uno"
+                android:background="#283593"
+                android:onClick="numeros"
+                android:text="@string/uno"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/multiplicacion"
+                android:background="#EBEBEB"
+                android:onClick="signosComunes"
+                android:text="@string/por"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/cero"
+                android:background="#4A148C"
+                android:onClick="numeros"
+                android:text="@string/cero"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/punto"
+                android:background="#311B92"
+                android:onClick="punto"
+                android:text="@string/punto"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/borrar"
+                android:background="#890E4F"
+                android:onClick="borrar"
+                android:text="@string/borrar"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/division"
+                android:background="#EBEBEB"
+                android:onClick="signosComunes"
+                android:text="@string/entre"
+                android:textColor="#000000" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F11E41"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/raiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#EBEBEB"
+                android:text="@string/raiz"
+                android:textColor="#000000"
+                android:onClick="signosExtras"/>
+
+            <Button
+                android:id="@+id/seno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#EBEBEB"
+                android:text="@string/sen"
+                android:textColor="#000000"
+                android:onClick="signosExtras"/>
+
+            <Button
+                android:id="@+id/logaritmo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#EBEBEB"
+                android:text="@string/logaritmo"
+                android:textColor="#000000"
+                android:onClick="signosExtras"/>
+
+            <Button
+                android:id="@+id/exponente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#EBEBEB"
+                android:text="@string/exponente"
+                android:textColor="#000000"
+                android:onClick="signosComunes"/>
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/calcula"
+            android:onClick="enviaDatos"
+            android:text="@string/calcula"
+            android:textColor="#EBEBEB"
+            android:background="#000000"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom|right"
+        android:textColor="#ffffff"
+        android:text="FYG"/>
+
+</LinearLayout>
